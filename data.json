@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "company": "iCog-ACC",
+    "logo": "/images/business-analyst.png",
+    "new": true,
+    "featured": false,
+    "position": "Business Development Associate",
+    "postedAt": "1d ago",
+    "contract": "Permanent",
+    "location": "Addis Ababa",
+    "languages": ["Apply"],
+    "tools": []
+  },
+  {
+    "id": 2,
+    "company": "iCog-ACC",
+    "logo": "/images/partners.png",
+    "new": false,
+    "featured": false,
+    "position": "Partnership Engagement Assistant",
+    "postedAt": "4d ago",
+    "contract": "Permanent",
+    "location": "Addis Ababa",
+    "languages": ["Apply"],
+    "tools": []
+  },
+  {
+    "id": 3,
+    "company": "iCog-ACC",
+    "logo": "/images/operationsIcon.png",
+    "new": false,
+    "featured": false,
+    "position": "Operations Assistant",
+    "postedAt": "1 Week ago",
+    "contract": "Permanent",
+    "location": "Addis Ababa",
+    "languages": ["Apply"],
+    "tools": []
+  },
+  {
+    "id": 4,
+    "company": "iCog-ACC",
+    "logo": "/images/business-analyst.png",
+    "new": true,
+    "featured": false,
+    "position": "Business Development Associate",
+    "postedAt": "1d ago",
+    "contract": "Permanent",
+    "location": "Addis Ababa",
+    "languages": ["Apply"],
+    "tools": []
+  },
+  {
+    "id": 5,
+    "company": "iCog-ACC",
+    "logo": "/images/partners.png",
+    "new": false,
+    "featured": false,
+    "position": "Partnership Engagement Assistant",
+    "postedAt": "4d ago",
+    "contract": "Permanent",
+    "location": "Addis Ababa",
+    "languages": ["Apply"],
+    "tools": []
+  },
+  {
+    "id": 6,
+    "company": "iCog-ACC",
+    "logo": "/images/operationsIcon.png",
+    "new": false,
+    "featured": false,
+    "position": "Operations Assistant",
+    "postedAt": "1 Week ago",
+    "contract": "Permanent",
+    "location": "Addis Ababa",
+    "languages": ["Apply"],
+    "tools": []
+  }
+]
