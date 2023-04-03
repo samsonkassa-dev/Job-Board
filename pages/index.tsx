@@ -3,6 +3,7 @@ import data from '../data.json';
 import { useState } from 'react';
 import { useRouter } from "next/router";
 import Link from 'next/link';
+
 interface JobProp {
   id: number,
   company: string,
@@ -116,9 +117,6 @@ const Home: NextPage = () => {
             </div>
             <hr className="border-t-[3px] mr-10" />
             <div className="flex flex-wrap gap-4 mr-10 sm:content-center sm:justify-end mt-4">
-              <h5 onClick={() => {
-                router.push('/description/id=1');
-              }}>appy</h5>
               <Link href={`description/${advert.id}`}>
                 <a>Apply</a>
               </Link>
