@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
-import data from '../data.json';
+import data from '../../../data.json';
 
 
 interface DescriptionProp {
@@ -19,9 +19,11 @@ const Job = () => {
   const router = useRouter();
   const {id}= router.query;
   let newData:DescriptionProp[];
-  newData = Object.assign(data)
+  newData = Object.assign(data.filter((item)=>{
+    return item.id.toString() == id;
+  }))
   newData.map((advert) => 
-    advert.tags = [advert.Title, advert.location, advert.JobType]
+    advert.tags = [advert.Title, advert.location, advert.JobType, advert.JobSummary]
   )
 
 
@@ -29,7 +31,7 @@ const Job = () => {
 
   return (
     <>
-      {/* {newData.map((advert) => (
+      {newData.map((advert) => (
         <div className="container">
       <h2 className={"text-left"}>{advert.Title}</h2>
       <div className={"flex"}>
@@ -50,9 +52,9 @@ const Job = () => {
         </div>
       </div>
     </div>
-      ))} */}
+      ))}
 
-<div className="flex ">
+{/* <div className="flex ">
       {newData.map((advert) => (
         <div className={`flex rounded-lg flex-col sm:flex-row pl-3.5 pt-3 pb-3 border-2 bg-white "}`} key={advert.id}>
         
@@ -60,7 +62,7 @@ const Job = () => {
         
             <div className="flex flex-1 w-1/4 bg-blue-500 text-black text-left p-4 font-bold text-black pt-2 pb-2 text-base sm:text-2xl hover:text-blue cursor-pointer">{advert.Title}</div>
             <div className="flex flex-row list-disc gap-10 text-grey font-normal pt-2 pb-2 text-base sm:text-lg">
-                <div>{id}</div>
+                <div>{advert.JobSummary}</div>
                 <div>{advert.location}</div>
             </div>
           </div>
@@ -68,7 +70,7 @@ const Job = () => {
          
         </div>
       ))}
-    </div>
+    </div> */}
 
       </>
   );
