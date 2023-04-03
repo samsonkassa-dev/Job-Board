@@ -37,65 +37,9 @@ const Home: NextPage = () => {
   newData.map((advert) =>
     advert.tags = [...advert.languages, ...advert.tools]
   )
-  // const [filterData, setFilterData] = useState<JobProp[]>(newData)
-  // let newFilterData: JobProp[] = Object.assign(newData)
-
-  // const addFilter = (e: React.MouseEvent) => {
-  //   let newList: string[] = [];
-  //   const target = e.target as HTMLElement;
-  //   if(filterList.indexOf(target.innerText)=== -1) {
-  //     newList.push(...filterList, target.innerText)
-  //   } else {
-  //     newList.push(...filterList);
-  //   }
-  //   setFilterList(newList);
-  //   setIsSearch(true);
-  //   if(newList.length===0) {
-  //       setIsSearch(false);
-  //     } 
-  //   for(let i=0; i<newList.length; i++) {
-  //     newFilterData = newFilterData.filter(({tags}) => tags.includes(newList[i]))
-  //   }
-
-  //   setFilterData(newFilterData);
-  //   }
-
-  // const removeFilter = (e:React.MouseEvent) => {
-  //   const target = e.target as HTMLElement;
-  //   const parent = target.offsetParent as HTMLElement
-  //   let newList = filterList.filter(tag => tag !== parent.innerText)
-  //   setFilterList(newList);
-  //   if(newList.length===0) {
-  //     setIsSearch(false);
-  //   } else {
-  //     for(let i=0; i<length; i++){
-  //       newFilterData = newFilterData.filter(({tags}) => tags.includes(newList[i]));
-  //     }
-  //   }
-  //   setFilterData(newFilterData);
-  // }
-
-  // const removeAllFilter=() => {
-  //   setFilterList([]);
-  //   setIsSearch(false);
-  //   setFilterData(newData)
-  // }
 
   return (
     <>
-      {/* <div className={`flex bg-red max-w-5xl mx-14 sm:mx-auto min-h-[72px] box-border pl-12 -mt-5 py-4 rounded-xl ${!isSearch && "hidden"}`}>
-        <div className="flex flex-1  gap-5  flex-wrap">
-          {filterList.map((tag) => (
-            <span key={tag} className="flex spanTag self-center items-center gap-3">
-              {tag}
-              <div className="bg-blue hover:bg-black flex items-center justify-center w-8 h-8" onClick={(e) => removeFilter(e)}>
-                <img src="/images/icon-remove.svg" alt="" className="w-fit h-fit" />
-              </div>
-            </span>
-          ))}
-          </div>
-          <span className="flex justify-end self-center mr-8 mt-2 font-semibold text-blue cursor-pointer" onClick={removeAllFilter}>Clear</span>
-      </div> */}
       <div className="flex flex-col gap-8 bg-rgb(92, 165, 165,10) max-w-5xl mx-14 sm:mx-auto mt-12 shadow-[rgba(92, 165, 165,100%)] drop-shadow-lg">
         {newData.map((advert) => (
           <div className={`flex rounded-lg flex-col sm:flex-row pl-3.5 pt-3 pb-3 border-2 bg-white ${advert.featured && "border-l-8 border-l-[#5CA5A5]"}`} key={advert.id}>
